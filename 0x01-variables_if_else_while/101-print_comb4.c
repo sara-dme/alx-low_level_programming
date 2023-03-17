@@ -14,7 +14,7 @@ int main(void)
 		{
 			for (c = 2 ; c <= 9 ; c++)
 			{
-				if ((a != b) && (a < b) && (b < c ))
+				if ((a != b) && (a < b) && (b < c))
 				{
 				putchar(a + '0');
 				putchar(b + '0');
@@ -25,9 +25,9 @@ int main(void)
 					putchar(' ');
 				}
 				}
-                	}
+			}
 		}
-	}	
+	}
 	putchar('\n');
-        return (0);
+	return (0);
 }
