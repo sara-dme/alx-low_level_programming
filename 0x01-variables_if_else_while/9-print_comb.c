@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-/* *
- * Main block
- *  prints all possible combinations of single-digit numbers.
- *  return 0 (Success)
+ /**
+ * main - main block
+ * Description: prints all single digit numbers  
+ * starting from 0, followed by a new line.
+ * Return: 0
  */
 int main(void)
 {
