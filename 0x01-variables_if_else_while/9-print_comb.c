@@ -1,10 +1,12 @@
 #include <stdio.h>
 
  /**
- * main - main block
- * Description: prints all single digit numbers
- * starting from 0, followed by a new line.
- * Return: 0
+ * main - Entry point
+ * 
+ * Description: 'the program's description'
+ * @parameter: describe the parameter
+ * 
+ * Return: Always 0 (Success)
  */
 
 int main(void)
