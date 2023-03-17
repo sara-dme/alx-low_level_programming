@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * main
- * Print all single digit numbers using only putchar
- * followed by a new line
- * Return: Always 0 (Success)
- */
+* main - Print all single digit numbers using only putchar
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 	int i;
