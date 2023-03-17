@@ -2,10 +2,11 @@
 
  /**
  * main - main block
- * Description: prints all single digit numbers  
+ * Description: prints all single digit numbers
  * starting from 0, followed by a new line.
  * Return: 0
  */
+
 int main(void)
 {
 	int i;
