@@ -6,7 +6,6 @@
  *
  * Rsturn : Always 0.
  */
-
 int main(void)
 {
 	char *c = "_putchar";
