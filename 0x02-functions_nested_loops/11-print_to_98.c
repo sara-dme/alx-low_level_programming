@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - afunction that prints all natural numbers from n to 98 ,
- * followed by a new line 
+ * followed by a new line
  * @n: number to begin from
  * Return: Always 0 (Success)
  */
@@ -18,7 +18,7 @@ void print_to_98(int n)
 		_putchar(',');
 		_putchar(' ');
 		}
-		if (n == 98)
+		if (i == 98)
 			printf("%d\n", i);
 	}
 	else if (n >= 98)
@@ -27,7 +27,7 @@ void print_to_98(int n)
 		{
 		printf("%d, ", i);
 		}
-		if (n == 98)
+		if (i == 98)
 			printf("%d\n", i);
 	}
 }
