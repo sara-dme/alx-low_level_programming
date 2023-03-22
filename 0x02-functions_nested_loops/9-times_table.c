@@ -12,7 +12,6 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			res = i * j;
-			
 			if (j == 0)
 			{
 				_putchar(res + '0');
@@ -27,7 +26,6 @@ void times_table(void)
 			else if (res >= 10)
 			{
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 				_putchar((res / 10) + '0');
 				_putchar((res % 10) + '0');
