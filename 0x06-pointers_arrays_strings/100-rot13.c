@@ -7,19 +7,20 @@
  */
 char *rot13(char *a)
 {
-	while (*a)
+	int i, j;
+
+	char aa[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		while ((*a >= 'a' && *a <= 'z') || (*a >= 'A' && *a <= 'Z'))
+		for (j = 0; a[j] != '\0'; i++)
 		{
-		if ((*a >= 'a' || *a >= 'A') && (*a < 'n' || *a < 'N'))
-		{
-			*a = *a + 13;
-			break;
+			if a[i] == aa[j]
+			{
+				a[i] = b[j];
+				break;
+			}
 		}
-		*a = *a - 13;
-		break;
-		}
-		a++;
 	}
 	return (a);
 }
