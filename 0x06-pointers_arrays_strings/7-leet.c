@@ -8,8 +8,8 @@
 char *leet(char *a)
 {
 	int i;
-	char *aa = "AaEeOoTtLl" ;
-	char *c = "4433007711" ;
+	char *aa = "AaEeOoTtLl";
+	char *c = "4433007711";
 
 	while (*a)
 	{
