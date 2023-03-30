@@ -8,17 +8,17 @@
 char *leet(char *a)
 {
 	int i;
-	char aa[] = { 'a', 'e', 'o', 't', 'l' };
-	char c[] = { '4', '3', '0', '7', '1' };
+	char aa[] = { "AaEeOoTtLl" };
+	char c[] = { "4433007711" };
 
 	while (*a)
 	{
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 10; i++)
 		{
-		if (*a == aa[i] || *a == (aa[i] - 32))
-		{	*a = c[i];
-			break;
-		}
+			if (*a == aa[i])
+			{
+			*a = c[i];
+			}
 		}
 		a++;
 	}
