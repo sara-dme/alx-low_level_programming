@@ -16,7 +16,9 @@ char *leet(char *a)
 		for (i = 0; i < 5; i++)
 		{
 		if (*a == aa[i] || *a == (aa[i] - 32))
-			*a = c[i];
+		{	*a = c[i];
+			break;
+		}
 		}
 		a++;
 	}
