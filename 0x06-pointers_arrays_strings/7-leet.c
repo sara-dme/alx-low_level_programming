@@ -9,14 +9,14 @@ char *leet(char *a)
 {
 	int i;
 	char aa[] = { 'a', 'e', 'o', 't', 'l' };
-	char c[] = { 4, 3, 0, 7, 1 };
+	char c[] = { '4', '3', '0', '7', '1' };
 
 	while (*a)
 	{
 		for (i = 0; i < 5; i++)
 		{
 		if (*a == aa[i] || *a == (aa[i] - 32))
-			*a = c[i] + '0';
+			*a = c[i];
 		}
 		a++;
 	}
