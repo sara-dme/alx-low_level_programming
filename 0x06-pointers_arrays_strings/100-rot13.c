@@ -7,7 +7,7 @@
  */
 char *rot13(char *a)
 {
-	while(*a)
+	while (*a)
 	{
 		while ((*a >= 'a' && *a <= 'z') || (*a >= 'A' && *a <= 'Z'))
 		{
