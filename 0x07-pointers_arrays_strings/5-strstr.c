@@ -9,6 +9,8 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
+	unsigned char **adr;
+	int x = 0;
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
@@ -16,7 +18,9 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (haystack[i] == needle[j])
 			{
-				return (haystack + i)
+				*adr = &haystack[i];
+				x = i;
+				return (adr);
 			}
 			else 
 				return (0);
