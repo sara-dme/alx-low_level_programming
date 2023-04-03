@@ -6,17 +6,17 @@
  * @accept: string
  * Return: a pointer to the byte in s that matcjes one of the byte
  */
- char *_strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i = 0;
 
 	while (s[i] != '\0')
 	{
-		while(*accept)
+		while (*accept)
 		{
 			if (s[i] == *accept)
 			{
-				return (s + i);	
+				return (s + i);
 			}
 			accept++;
 		}
