@@ -12,4 +12,5 @@ int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int _sqr(int i, int n);
 int prim(int i, int n);
+int _str(char *s, int i, int len);
 #endif
