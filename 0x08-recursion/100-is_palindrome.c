@@ -1,4 +1,5 @@
 #include "main.h"
+int _len(int i, char *s);
 
 /**
  * is_palindrome - 1 if a string is a palindrome and 0 if not.
@@ -8,10 +9,8 @@
 int is_palindrome(char *s)
 {
 	int len;
-	
-	 for (len = 0; s[len] != '\0'; len++)
-        {
-        }
+
+	len = _len(0, s);	
 	if (*s == 0)
 		return (1);
 	else
@@ -35,4 +34,19 @@ int _str(char *s, int i, int len)
 			return (_str(s, i + 1, len - 1));
 	}
 	return (0);
+}
+
+/**
+ * _len - calcul length 
+ * @s: string 
+ * @i: int 
+ * Return: int 
+ */
+int _len(int i, char *s)
+{
+	if (s[i] != '\0')
+		return (_len(i + 1), s);
+	else
+		return (i);
+		
 }
