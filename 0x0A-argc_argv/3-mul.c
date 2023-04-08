@@ -6,7 +6,7 @@
  * main - that multiplies two numbers
  * @argc: count arg
  * @argv: array of arg
- * Return: Always 0
+ * Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
