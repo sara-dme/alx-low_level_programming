@@ -11,22 +11,20 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, sum = 0, i;
+	int sum, i;
 	
-	a = 0;
-	printf("count %d\n", argc);
 	if (argc <= 1)
 	{
 		printf("%d\n", 0);
 	}
 	else
 	{
-		for (i = 2; i < argc; i++)
+		sum = 0;
+		for (i = 1; i < argc ; i++)
 		{
-			a = atoi(argv[i]);
-			if (isdigit(a))
+			if (atoi(argv[i]) != 0)
 			{
-				sum += a;
+				sum = sum + atoi(argv[i]);
 			}
 			else
 			{
@@ -34,11 +32,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-	/*	for (i = 0; i < argc; i++)
-		{
-			sum += atoi(argv[i]);
-		}*/
-	}
 	printf("%d\n", sum);
+	}
 	return (0);
 }
