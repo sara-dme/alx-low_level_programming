@@ -3,14 +3,15 @@
 #include <stdlib.h>
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money.
+ * main - prints the minimum number of coins
  * @argc: count of arg
  * @argv: array of arg in char
  * Return: 0 if sucess or 1 otherwise
  */
 int main(int argc, char *argv[])
 {
-	int ch, t, coin;
+	int ch;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -18,7 +19,6 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		t = 0;
 		ch = atoi(argv[1]);
 		if (ch <= 0)
 		{
@@ -26,6 +26,19 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
+			printf("%d\n", num_coin(ch));
+		}
+	}
+	return (0);
+}
+/**
+ * num_coin - calcul num of coin
+ * @ch: cent
+ * Return: num coin
+ */
+int num_coin(int ch)
+{
+	int t = 0, coin = 0;
 			while (t + 25 <= ch)
 			{
 				t = t + 25;
@@ -51,8 +64,5 @@ int main(int argc, char *argv[])
 				t = t + 1;
 				coin++;
 			}
-			printf("%d\n", coin);
-		}
-	}
-	return (0);
+	return (coin);
 }
