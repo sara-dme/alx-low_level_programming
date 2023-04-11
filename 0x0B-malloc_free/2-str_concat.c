@@ -22,9 +22,9 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	if (s1 == 0)
-		sz = j + 1;
+		s1 = "";
 	else if (s2 == 0)
-		sz = i + 1;
+		s2 = "";
 	else
 		sz = i + j + 1;
 	ar = malloc(sizeof(*ar) * sz);
