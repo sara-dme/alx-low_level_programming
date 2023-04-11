@@ -15,22 +15,23 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == 0 && s2 == 0)
 		return (NULL);
+	if (s2 == 0)
+		s2 = "";
+	else if (s1 == 0)
+		s1 = "";
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 	}
 	for (j = 0; s2[j] != '\0'; j++)
 	{
 	}
-	if (s1 == 0)
-		s1 = "";
-	else if (s2 == 0)
-		s2 = "";
 	sz = i + j + 1;
 	ar = malloc(sizeof(*ar) * sz);
 	if (ar == 0)
 		return (NULL);
 	for (a = 0, b = 0; a < sz; a++)
-	{	if (a < i)
+	{	
+		if (a < i)
 			ar[a] = s1[a];
 		else
 			ar[a] = s2[b++];
