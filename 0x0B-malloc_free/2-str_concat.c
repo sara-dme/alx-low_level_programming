@@ -13,12 +13,12 @@ char *str_concat(char *s1, char *s2)
 	int i, j, sz, a, b;
 	char *ar;
 
-	if (s1 == 0 && s2 == 0)
-		return (NULL);
 	if (s2 == 0)
 		s2 = "";
 	else if (s1 == 0)
 		s1 = "";
+	else if (s1 == 0 && s2 == 0)
+		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 	}
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (ar == 0)
 		return (NULL);
 	for (a = 0, b = 0; a < sz; a++)
-	{	
+	{
 		if (a < i)
 			ar[a] = s1[a];
 		else
