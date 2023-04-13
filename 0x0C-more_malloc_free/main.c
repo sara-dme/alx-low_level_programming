@@ -40,7 +40,7 @@ int main(void)
 {
     int *a;
 
-    a = array_range(13, 10);
+    a = array_range(8888, 30);
     simple_print_buffer(a, 11);
     free(a);
     return (0);
