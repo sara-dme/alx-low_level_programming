@@ -5,7 +5,7 @@
 
 /**
  * _calloc - allocates memory for an array, using malloc
- * @nmemb: integer number of elements 
+ * @nmemb: integer number of elements
  * @size: integer size
  * Return: null or pointer
  */
