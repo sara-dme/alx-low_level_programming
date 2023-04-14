@@ -7,8 +7,8 @@ int _atoi(char *s);
 int *ptr(int n);
 int len(int n);
 
-/** 
- * ptr - pointer contain num 
+/**
+ * ptr - pointer contain num
  * @n: number to put into pointer
  * Return: pointer
  */
@@ -18,6 +18,7 @@ int *ptr(int n)
 	int *p = malloc(sizeof(int) * l);
 	int r;
 	int i = 0;
+
 	if (p == NULL)
 		return (NULL);
 	if (n >= 10)
@@ -31,12 +32,13 @@ int *ptr(int n)
 }
 /**
  * len -  length
- * @i: int length
- * Return: int 
+ * @n: int length
+ * Return: int
  */
 int len(int n)
 {
 	int i = 0;
+
 	if (n >= 10)
 	{
 		len(n / 10);
@@ -84,7 +86,7 @@ int main(int argc, char *argv[])
 		num = i * j;
 		printf("%d\n", num);
 	}
-return (0);	
+	return (0);
 }
 /**
  * _atoi - convert a string to an integer.
@@ -111,10 +113,10 @@ return (res);
 /**
  * _isdigit - check for digit
  * @a: char to check
- * @len: length
+ * @le: length
  * Return: Always 0 or 1
  */
-int _isdigit(int *a,int le)
+int _isdigit(int *a, int le)
 {
 	int i;
 
