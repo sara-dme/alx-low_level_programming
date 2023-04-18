@@ -4,7 +4,7 @@
 
 /**
  * free_grid -  frees a 2 dimensional grid previously created
- * @grid: array 
+ * @grid: array
  * @height: int value
  */
 void free_grid(int **grid, int height)
