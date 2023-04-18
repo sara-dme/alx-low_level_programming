@@ -15,7 +15,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *ow;
 	dog_t *d;
 	int i, len1 = 0, len2 = 0;
-
+	
+	if ((name == NULL) || (owner == NULL))
+	{
+		free(name);
+		free(owner);
+		return (NULL);
+	}
 	for (i = 0; name[i] != '\0'; i++)
 		len1++;
 	for (i = 0; owner[i] != '\0'; i++)
