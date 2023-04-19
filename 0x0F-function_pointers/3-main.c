@@ -5,7 +5,8 @@
 /**
  * main - check the code
  * @argc:num of arg
- * @argv: char pointer conten args
+ * @argv: char pointer  args
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
