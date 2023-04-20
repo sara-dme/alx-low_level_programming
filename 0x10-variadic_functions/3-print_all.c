@@ -11,27 +11,13 @@
 void print_all(const char * const format, ...)
 {
 	unsigned int i;
-	unsigned int n = 0;
 /*	const char tab[4] =  {'c', 'i', 'f', 's'};*/
 	va_list args;
 	
-	i = 0;
-	while (format[i] != '\0')
-	{
-/*		if ((format[i] == 'c') || (format[i] == 'i') ||
-			       	(format[i] == 'f') || (format[i] == 's'))
-		{
-			n = n + 1;
-		}*/
-		n++;
-		i++;
-	}
 	va_start(args, format);
 
 	i = 0;
-	n++;
-/*	while (format[i] != '\0')*/
-	while (i < n)
+	while (format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -50,7 +36,7 @@ void print_all(const char * const format, ...)
 			case 's':
 				if (va_arg(args, char *) == NULL)
 						printf("nil");
-				printf("%s", va_arg(args, char*));
+				printf("%s", va_arg(args, char *));
 				printf(", ");
 				break;
 		}
