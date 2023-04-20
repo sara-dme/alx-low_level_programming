@@ -35,12 +35,9 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 						break;
 				}
-				else
-				{
 				printf("%s", va_arg(args, char *));
 				printf(", ");
 				break;
-				}
 		}
 		i++;
 	}
