@@ -1,7 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
 
 /**
  * print_all - prints anything.
@@ -11,9 +8,8 @@
 void print_all(const char * const format, ...)
 {
 	unsigned int i;
-/*	const char tab[4] =  {'c', 'i', 'f', 's'};*/
 	va_list args;
-	
+
 	va_start(args, format);
 
 	i = 0;
@@ -35,10 +31,16 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				if (va_arg(args, char *) == NULL)
-						printf("nil");
+				{
+					printf("(nil)");
+						break;
+				}
+				else
+				{
 				printf("%s", va_arg(args, char *));
 				printf(", ");
 				break;
+				}
 		}
 		i++;
 	}
