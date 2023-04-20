@@ -7,10 +7,6 @@
  */
 int main(void)
 {
-    print_all("ceis", 'B', 3, "stSchool");
-    print_all("ceiss", 'B', 3, "stSchool", "gfhg");
-    print_all("ceisdd", 'B', 3, "stSchool");
-    print_all("ceisc", 'B', 3, "stSchool", 'l');
-    print_all("iihs", 66, 3, "sl");
+    print_strings(", ", 2, "Jay", "Django");
     return (0);
 }
