@@ -7,36 +7,50 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i, j;
 	va_list args;
+	int test = 0;
+	char *s;
+	const char frm[] = {'c', 'i', 'f', 's'};
 
 	va_start(args, format);
 
 	i = 0;
 	while (format[i] != '\0')
 	{
+		j = 0;
+		while (frm[j])
+		{
+		if (format[i] == frm[j] && test == 1)
+		{
+			printf(", ");
+			break;
+		}
+		j++;
+		}
 		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
-				printf(", ");
+				test = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(args, int));
-				printf(", ");
+				test = 1;
 				break;
 			case 'f':
 				printf("%f", va_arg(args, double));
-				printf(", ");
+				test = 1;
 				break;
 			case 's':
-				if (va_arg(args, char *) == NULL)
+				s = va_arg(args, char *);
+				if (!s)
 				{
 					printf("(nil)");
 						break;
 				}
-				printf("%s", va_arg(args, char *));
-				printf(", ");
+				printf("%s", s);
+				test = 1;
 				break;
 		}
 		i++;
