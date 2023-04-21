@@ -7,27 +7,15 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j;
+	unsigned int i = 0, test = 0;
 	va_list args;
-	int test = 0;
 	char *s;
-	const char frm[] = {'c', 'i', 'f', 's'};
 
 	va_start(args, format);
 
-	i = 0;
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (frm[j])
-		{
-		if (format[i] == frm[j] && test == 1)
-		{
-			printf(", ");
-			break;
-		}
-		j++;
-		}
+		check_com(test, format[i]);
 		switch (format[i])
 		{
 			case 'c':
@@ -57,4 +45,25 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(args);
+}
+
+/**
+ * check_com - check if it will be a comma
+ * @test: num to confirm
+ * @format: string to compare with
+ */
+void check_com(int test, const char format)
+{
+	const char frm[] = {'c', 'i', 'f', 's'};
+	int i = 0;
+
+	while (frm[i])
+	{
+	if (format == frm[i] && test == 1)
+	{
+		printf(", ");
+		break;
+	}
+	i++;
+}
 }
