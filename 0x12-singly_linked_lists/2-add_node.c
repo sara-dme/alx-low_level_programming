@@ -9,11 +9,11 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *lst;
-	
+
 	if (head == NULL && str == NULL)
 		return (NULL);
 	lst = malloc(sizeof(list_t));
-	if(lst == NULL)
+	if (lst == NULL)
 	{
 		free(lst);
 		return (NULL);
