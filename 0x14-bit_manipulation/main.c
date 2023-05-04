@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,13 +8,15 @@
  */
 int main(void)
 {
-    int n;
+    unsigned int n;
 
-    n = get_bit(1024, 10);
-    printf("%d\n", n);
-    n = get_bit(98, 1);
-    printf("%d\n", n);
-    n = get_bit(1024, 0);
-    printf("%d\n", n);
+    n = flip_bits(1024, 1);
+    printf("%u\n", n);
+    n = flip_bits(402, 98);
+    printf("%u\n", n);
+    n = flip_bits(1024, 3);
+    printf("%u\n", n);
+    n = flip_bits(1024, 1025);
+    printf("%u\n", n);
     return (0);
 }
