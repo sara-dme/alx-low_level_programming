@@ -28,7 +28,7 @@ int main(int ac, char **av)
 {
 	int file_from, file_to, wr, rd, len = 1024;
 	char *buffer;
-	
+
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
