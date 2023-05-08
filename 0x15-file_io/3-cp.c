@@ -20,7 +20,9 @@ int file_exist(const char *filename)
 
 /**
  * main - check the code
- * return: always 0
+ * @ac: num of arg
+ * @av: arg
+ * Return: always 0
  */
 int main(int ac, char **av)
 {
