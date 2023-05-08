@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL || fl == NULL)
 		return (0);
 
-	opfile = open(filename,O_RDONLY);
+	opfile = open(filename, O_RDONLY);
 	if (opfile < 0)
 	{
 		close(opfile);
@@ -25,10 +25,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	rd = read(opfile, fl, letters);
 	wr = write(STDOUT_FILENO, fl, rd);
-	
 	free(fl);
 	close(opfile);
-	
 	if (wr < 0 || rd < 0)
 		return (0);
 	return (wr);
