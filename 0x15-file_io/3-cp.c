@@ -29,18 +29,18 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "usage: cp %s %s ", av[1], av[2]);
+		dprintf(2, "usage: cp file_from file_to\n");
 		exit(97);
 	}
 	if (file_exist(av[1]) != 0)
 	{
-		dprintf(2, "Error: Can't read from file %s", av[1]);
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	if (file_exist(av[2]) == 0)
 		file_to = open(av[2], O_WRONLY | O_TRUNC);
 	else
-		file_to = open(av[2], O_CREAT | O_WRONLY, 0664);
+		file_to = open(av[2], O_CREAT | O_WRONLY, 00664);
 
 	file_from = open(av[1], O_RDONLY);
 	buffer = malloc(sizeof(char) * len);
@@ -49,10 +49,19 @@ int main(int ac, char **av)
 	free(buffer);
 	if (wr == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", av[2]);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	close(file_from);
-	close(file_to);
+
+	if (close(file_from) < 0)
+	{
+		dprintf(2, "Error: Can't close fd %i\n", file_from);
+		return (100);
+	}
+	if (close(file_to) < 0)
+	{
+		dprintf(2, "Error: Can't close fd %i\n", file_to);
+		return (100);
+	}
 	return (0);
 }
