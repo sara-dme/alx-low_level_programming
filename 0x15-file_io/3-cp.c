@@ -18,7 +18,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from filr%s\n", av[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	rd = 1024;
 	while (rd == 1024)
 	{
