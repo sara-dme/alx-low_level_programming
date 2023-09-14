@@ -15,8 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int i, index;
 	char *copy;
 
-       if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
-	      return (0);
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+		return (0);
 
        copy = strdup(value);
        if (copy == NULL)
