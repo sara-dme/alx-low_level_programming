@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module contains island_perimeter fuction """
 
 
 def island_perimeter(grid):
@@ -8,4 +9,5 @@ def island_perimeter(grid):
         for col in row:
             if col == 1:
                 num += 1
+
     return ((num * 2) + 2)
